@@ -33,25 +33,24 @@
  
 <script>
  
+  //actionlistener for clicking on menu bar
+  google.maps.event.addDomListener(li, "click", function(){
+	google.maps.event.trigger(marker, "click");
+});
+ 
   var map;
     
- 
   $(document).ready(function(){
  
  
     var mapOptions = {
-      zoom: 3,
-      center: new google.maps.LatLng(43, 0),
+      zoom: 11,
+      center: new google.maps.LatLng(34.05, -118.243),
       mapTypeId: google.maps.MapTypeId.TERRAIN
     };
  
     map=new google.maps.Map($('#mapcanvas')[0], mapOptions);
  
-    //*********************************************************************
-    // Add the layer showing the inventory
-    //*********************************************************************
- 
-        
   });//end document ready
  
  
